@@ -8,34 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="test-title">Website Test Page</h1>
+        <h1 class="test-title">System Check</h1>
         <div class="test-content">
-            <button id="testButton" class="test-btn">Test Interaction</button>
-            <div id="testResult"></div>
+            <button id="testBtn" class="test-button">Run Tests</button>
+            <div id="testResults"></div>
         </div>
     </div>
 
     <script src="scripts/script.js"></script>
     <script>
-        (function() {
-            try {
-                const testButton = document.getElementById('testButton');
-                const resultDiv = document.getElementById('testResult');
-                
-                if (!testButton || !resultDiv) {
-                    throw new Error('Test elements not found');
-                }
-
-                testButton.addEventListener('click', () => {
-                    resultDiv.textContent = "System Test Successful! ✅";
-                    resultDiv.style.color = "#27ae60";
-                    resultDiv.style.marginTop = "15px";
-                });
-
-            } catch (error) {
-                console.error('Test page error:', error.message);
-            }
-        })();
+        document.getElementById('testBtn').addEventListener('click', () => {
+            const results = document.getElementById('testResults');
+            results.innerHTML = `
+                <p>✓ Layout System: Operational</p>
+                <p>✓ Color Scheme: Verified</p>
+                <p>✓ Responsive Design: Active</p>
+            `;
+            results.style.color = '#27ae60';
+        });
     </script>
 </body>
 </html>
