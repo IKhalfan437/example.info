@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="test-title">Website Test Page</h1>
+        <div class="test-content">
+            <button id="demoButton" class="test-button">Click for Demo</button>
+            <div id="output" class="test-output"></div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        // Test page specific JavaScript
+        document.getElementById('demoButton').addEventListener('click', () => {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>✅ Website test successful!</p>';
+            output.style.color = '#27ae60';
+        });
+    </script>
+</body>
+</html>
