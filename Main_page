@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Weekend</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <header>
+    <h1>CIRCLE</h1>
+    <p>WEEKEND</p>
+  </header>
+  <main>
+    <section id="event-info">
+      <h2>The Event</h2>
+      <p>45 Overlea Blvd, Toronto, ON M4H 1C3</p>
+      <p>11:00 AM to 4:00 PM</p>
+      <p>Join us for activities and fun every Saturday!</p>
+    </section>
+    <nav>
+      <a href="index2.html">Go to Test Page</a>
+    </nav>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
