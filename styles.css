@@ -101,3 +101,10 @@ body {
         font-size: 1.5rem;
     }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE11 fallback */
+    .title-line-3 {
+        color: var(--floral-pink);
+        background: none;
+    }
+}
