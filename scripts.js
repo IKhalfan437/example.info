@@ -1,12 +1,10 @@
-// Main JavaScript file
+// Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Website loaded successfully!');
+    // Add any interactive functionality here
+    console.log('Weekend Circle initialized!');
     
-    // Test button functionality
-    const testButton = document.getElementById('testButton');
-    if(testButton) {
-        testButton.addEventListener('click', () => {
-            alert('Button clicked successfully!');
-        });
-    }
+    // Example: Add date to the header
+    const date = new Date().toLocaleDateString();
+    const header = document.querySelector('.main-header');
+    header.insertAdjacentHTML('afterend', `<p class="current-date">Today's Date: ${date}</p>`);
 });
