@@ -8,11 +8,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Test Page</h1>
-        <p>This is a test page for demonstration purposes.</p>
-        <button id="testButton">Click Me</button>
+        <h1 class="test-title">Website Test Page</h1>
+        <div class="test-content">
+            <button id="demoButton" class="test-button">Click for Demo</button>
+            <div id="output" class="test-output"></div>
+        </div>
     </div>
 
     <script src="scripts/script.js"></script>
+    <script>
+        // Test page specific JavaScript
+        document.getElementById('demoButton').addEventListener('click', () => {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>✅ Website test successful!</p>';
+            output.style.color = '#27ae60';
+        });
+    </script>
 </body>
 </html>
