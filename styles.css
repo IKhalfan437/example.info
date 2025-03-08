@@ -11,22 +11,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+
+
 .title-line-3 {
-  font-size: 3.5rem;
-    color: var(--accent-yellow); /* Fallback color */
+    font-size: 3.5rem;
     font-weight: 900;
     letter-spacing: 0.25em;
     background: var(--flower-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-emphasis-color: transparent;
+    color: transparent; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Webkit fallback */
+    -moz-text-fill-color: transparent; /* Mozilla fallback */
     padding: 0 1rem;
     display: inline-block;
-    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 body {
