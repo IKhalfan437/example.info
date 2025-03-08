@@ -10,18 +10,18 @@
     <div class="container">
         <h1 class="test-title">Website Test Page</h1>
         <div class="test-content">
-            <button id="demoButton" class="test-button">Click for Demo</button>
-            <div id="output" class="test-output"></div>
+            <button id="testButton" class="test-btn">Test Interaction</button>
+            <div id="testResult"></div>
         </div>
     </div>
 
     <script src="scripts/script.js"></script>
     <script>
-        // Test page specific JavaScript
-        document.getElementById('demoButton').addEventListener('click', () => {
-            const output = document.getElementById('output');
-            output.innerHTML = '<p>✅ Website test successful!</p>';
-            output.style.color = '#27ae60';
+        document.getElementById('testButton').addEventListener('click', () => {
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.textContent = "System Test Successful! ✅";
+            resultDiv.style.color = "#27ae60";
+            resultDiv.style.marginTop = "15px";
         });
     </script>
 </body>
