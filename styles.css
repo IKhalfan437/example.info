@@ -1,3 +1,23 @@
+/* Validated CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+
+/* ... (rest of previous CSS remains the same) ... */
+
+
 /* Flyer-Exact Styles */
 * {
     margin: 0;
