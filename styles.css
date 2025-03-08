@@ -1,4 +1,4 @@
-/* Validated CSS */
+/* Flyer-Exact Color Scheme */
 * {
     margin: 0;
     padding: 0;
@@ -6,28 +6,8 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.4;
-}
-
-/* ... (rest of previous CSS remains the same) ... */
-
-
-/* Flyer-Exact Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: #fff;
+    font-family: 'Arial Black', sans-serif;
+    background: #ffffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -42,14 +22,18 @@ body {
     text-align: center;
 }
 
-/* Title Section */
+/* Title Section - Flyer Colors */
 .title-container {
     margin-bottom: 40px;
+    background: #002b5c; /* Dark blue from "THE" and "CIRCLE" */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .title-line-1 {
     font-size: 2.8rem;
-    color: #000;
+    color: #ffd100; /* Yellow from "THE" */
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: -8px;
@@ -57,71 +41,73 @@ body {
 
 .title-line-2 {
     font-size: 3.8rem;
-    color: #e74c3c;
+    color: #e51937; /* Bright red from "Weekend" */
     margin: 12px 0;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .title-line-3 {
     font-size: 2.8rem;
-    color: #000;
+    color: #ffd100; /* Yellow from "CIRCLE" */
     letter-spacing: 8px;
     text-transform: uppercase;
     margin-top: -8px;
 }
 
-/* Event Details */
+/* Event Details - Flyer Colors */
 .event-info {
     margin: 40px 0;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .event-text {
     font-size: 2rem;
-    color: #000;
+    color: #002b5c; /* Dark blue */
     line-height: 1.3;
     margin-bottom: 30px;
     font-weight: 600;
 }
 
 .details-box {
-    background: #f8f9fa;
+    background: #ffffff;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border: 2px solid #e51937; /* Red accent border */
 }
 
 .time {
     font-size: 1.6rem;
-    color: #2c3e50;
+    color: #e51937; /* Red */
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .address {
     font-size: 1.3rem;
-    color: #7f8c8d;
+    color: #002b5c; /* Dark blue */
     line-height: 1.4;
 }
 
-/* Footer */
+/* Footer - Organization Colors */
 .organization {
     margin-top: 50px;
     padding-top: 25px;
-    border-top: 2px solid #bdc3c7;
+    border-top: 3px solid #e51937; /* Red accent line */
 }
 
 .tno-logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #2980b9;
+    color: #002b5c; /* Dark blue */
     display: block;
     margin-bottom: 8px;
 }
 
 .org-name {
     font-size: 1.1rem;
-    color: #95a5a6;
+    color: #666666;
     letter-spacing: 0.5px;
 }
 
