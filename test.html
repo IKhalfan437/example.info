@@ -17,12 +17,25 @@
 
     <script src="scripts/script.js"></script>
     <script>
-        document.getElementById('testButton').addEventListener('click', () => {
-            const resultDiv = document.getElementById('testResult');
-            resultDiv.textContent = "System Test Successful! ✅";
-            resultDiv.style.color = "#27ae60";
-            resultDiv.style.marginTop = "15px";
-        });
+        (function() {
+            try {
+                const testButton = document.getElementById('testButton');
+                const resultDiv = document.getElementById('testResult');
+                
+                if (!testButton || !resultDiv) {
+                    throw new Error('Test elements not found');
+                }
+
+                testButton.addEventListener('click', () => {
+                    resultDiv.textContent = "System Test Successful! ✅";
+                    resultDiv.style.color = "#27ae60";
+                    resultDiv.style.marginTop = "15px";
+                });
+
+            } catch (error) {
+                console.error('Test page error:', error.message);
+            }
+        })();
     </script>
 </body>
 </html>
