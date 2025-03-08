@@ -1,4 +1,4 @@
-/* Strict Flyer Reproduction */
+/* Flyer-Exact Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #ffffff;
+    background: #fff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,59 +18,57 @@ body {
 .container {
     width: 100%;
     max-width: 600px;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
-/* Title Styles */
-header {
+/* Title Section */
+.title-container {
     margin-bottom: 40px;
-}
-
-.title-container h1 {
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 .title-line-1 {
     font-size: 2.8rem;
-    color: #000000;
+    color: #000;
     letter-spacing: 4px;
-    margin-bottom: -10px;
+    text-transform: uppercase;
+    margin-bottom: -8px;
 }
 
 .title-line-2 {
     font-size: 3.8rem;
     color: #e74c3c;
-    margin: 10px 0;
-    letter-spacing: 2px;
+    margin: 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .title-line-3 {
     font-size: 2.8rem;
-    color: #000000;
+    color: #000;
     letter-spacing: 8px;
-    margin-top: -10px;
+    text-transform: uppercase;
+    margin-top: -8px;
 }
 
-/* Event Info */
+/* Event Details */
 .event-info {
     margin: 40px 0;
 }
 
 .event-text {
     font-size: 2rem;
-    color: #000000;
+    color: #000;
     line-height: 1.3;
     margin-bottom: 30px;
     font-weight: 600;
 }
 
-.details {
+.details-box {
     background: #f8f9fa;
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .time {
@@ -86,14 +84,14 @@ header {
     line-height: 1.4;
 }
 
-/* Organization Footer */
+/* Footer */
 .organization {
     margin-top: 50px;
     padding-top: 25px;
     border-top: 2px solid #bdc3c7;
 }
 
-.tno {
+.tno-logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #2980b9;
@@ -107,13 +105,14 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Center Alignment Fixes */
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
     }
     
-    .title-line-1, .title-line-3 {
+    .title-line-1,
+    .title-line-3 {
         font-size: 2rem;
     }
     
@@ -123,5 +122,13 @@ header {
     
     .event-text {
         font-size: 1.6rem;
+    }
+    
+    .time {
+        font-size: 1.4rem;
+    }
+    
+    .address {
+        font-size: 1.1rem;
     }
 }
