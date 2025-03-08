@@ -12,6 +12,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+.title-line-3 {
+    font-size: 3.5rem;
+    color: var(--accent-yellow); /* Fallback color */
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    background: var(--flower-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    padding: 0 1rem;
+    display: inline-block;
+    position: relative;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
