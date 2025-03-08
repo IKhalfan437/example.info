@@ -1,9 +1,10 @@
-/* Flyer-Exact Design System */
 :root {
-    --primary-blue: #0055a5;
+    --primary-blue: #0066cc;
     --accent-yellow: #ffd700;
-    --highlight-red: #e63946;
+    --highlight-red: #ff4757;
+    --floral-pink: #ff69b4;
     --neutral-gray: #4a4a4a;
+    --flower-gradient: linear-gradient(45deg, #ff69b4 0%, #ffd700 50%, #0066cc 100%);
 }
 
 * {
@@ -13,93 +14,155 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text x="-10" y="70" font-size="20" fill="%23ff69b410">✿</text></svg>');
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.floral-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        var(--floral-pink) 15px,
+        var(--floral-pink) 30px
+    );
+    opacity: 0.1;
+    z-index: 0;
 }
 
 .container {
     max-width: 600px;
     padding: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-/* Hierarchical Typography */
 .main-title {
     margin-bottom: 2.5rem;
+    position: relative;
 }
 
 .title-line {
     display: block;
     text-transform: uppercase;
+    position: relative;
 }
 
 .title-line-1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--neutral-gray);
     letter-spacing: 0.15em;
     margin-bottom: -0.5rem;
+    text-shadow: 2px 2px 0 var(--accent-yellow);
 }
 
 .title-line-2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: var(--primary-blue);
     font-weight: 700;
-    margin: 0.8rem 0;
+    margin: 1rem 0;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
 }
 
 .title-line-3 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--accent-yellow);
     font-weight: 900;
     letter-spacing: 0.25em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: var(--flower-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 1rem;
+    display: inline-block;
 }
 
-/* Information Card */
 .info-card {
     background: #f8f9fa;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     margin: 2rem 0;
+    border: 3px dashed var(--primary-blue);
     position: relative;
-    border: 2px solid var(--primary-blue);
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, transparent 50%, var(--floral-pink) 100%);
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .highlight-info {
-    margin: 1.2rem 0;
+    margin: 1.5rem 0;
 }
 
 .time {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: var(--highlight-red);
     font-weight: 700;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--highlight-red);
+    border-radius: 30px;
 }
 
 .address {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--neutral-gray);
     line-height: 1.5;
-}
-
-/* Call to Action */
-.cta-text {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin: 2rem 0;
-    line-height: 1.3;
     font-weight: 600;
 }
 
-/* Branding Footer */
+.cta-text {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin: 2rem 0;
+    line-height: 1.3;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 var(--accent-yellow);
+}
+
+.floral-divider {
+    color: var(--floral-pink);
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    animation: pulse 2s infinite;
+}
+
+.info-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--flower-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
 .branding {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 2px solid #ddd;
+    border-top: 2px solid var(--primary-blue);
 }
 
 .org-acronym {
@@ -116,29 +179,34 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Responsive Design */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 @media (max-width: 768px) {
     .container {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .title-line-1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .title-line-2 {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     .title-line-3 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .cta-text {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .time {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
